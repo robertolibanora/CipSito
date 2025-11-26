@@ -32,6 +32,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'change-me-in-production-' + os.urando
 app.mount("/assets", StaticFiles(directory="assets"), name="assets")
 # Mount aggiuntivo per /img come fallback
 app.mount("/img", StaticFiles(directory="assets/img"), name="img")
+# Mount per i video
+app.mount("/video", StaticFiles(directory="assets/video"), name="video")
 
 # Modello per il form di contatto
 class ContactForm(BaseModel):
