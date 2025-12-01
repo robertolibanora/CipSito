@@ -146,6 +146,9 @@ body {
     color: var(--white);
     padding-top: 80px;
     overflow: hidden;
+    /* Fix Safari mobile */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 .hero-image {
