@@ -1225,3 +1225,11 @@ body {
     }
 }
 
+
+/* Fix specifico per Safari iOS */
+@supports (-webkit-touch-callout: none) {
+    .hero-image {
+        -webkit-transform: translate3d(0, 0, 0) !important;
+        transform: translate3d(0, 0, 0) !important;
+    }
+}
