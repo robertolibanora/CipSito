@@ -59,6 +59,21 @@ body {
 }
 
 /* ============================================
+   SCROLL PROGRESS BAR
+   ============================================ */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--gradient-primary);
+    z-index: 1001;
+    transition: width 0.1s ease-out;
+    box-shadow: 0 2px 10px rgba(26, 77, 140, 0.5);
+}
+
+/* ============================================
    NAVIGATION
    ============================================ */
 .navbar {

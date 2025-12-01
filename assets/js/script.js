@@ -1,4 +1,18 @@
 // ============================================
+// SCROLL PROGRESS BAR
+// ============================================
+const scrollProgress = document.getElementById('scrollProgress');
+
+function updateScrollProgress() {
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / windowHeight) * 100;
+    scrollProgress.style.width = scrolled + '%';
+}
+
+window.addEventListener('scroll', updateScrollProgress);
+window.addEventListener('load', updateScrollProgress);
+
+// ============================================
 // NAVBAR SCROLL EFFECT
 // ============================================
 const navbar = document.getElementById('navbar');
