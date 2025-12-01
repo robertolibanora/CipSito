@@ -129,21 +129,7 @@ body {
 }
 
 .menu-toggle {
-    display: none;
-    flex-direction: column;
-    background: none;
-    border: none;
-    cursor: pointer;
-    gap: 5px;
-    padding: 5px;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: var(--dark);
-    transition: var(--transition);
-    border-radius: 2px;
+    display: none !important;
 }
 
 /* ============================================
@@ -901,38 +887,22 @@ body {
     }
 
     .nav-menu {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        flex-direction: column;
-        background: var(--white);
-        width: 100%;
-        padding: var(--spacing-md);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transition: var(--transition);
-        gap: 0;
-        max-height: calc(100vh - 70px);
-        overflow-y: auto;
-    }
-
-    .nav-menu.active {
-        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
     }
 
     .nav-menu li {
-        width: 100%;
-        border-bottom: 1px solid var(--light-gray);
+        width: auto;
+        border-bottom: none;
     }
 
     .nav-link {
         display: block;
-        padding: 1rem;
-        font-size: 1rem;
-    }
-
-    .menu-toggle {
-        display: flex;
-        z-index: 1001;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+        white-space: nowrap;
     }
 
     .logo img {
@@ -1180,6 +1150,15 @@ body {
 
     .container {
         padding: 0 0.75rem;
+    }
+
+    .nav-menu {
+        gap: 0.25rem;
+    }
+
+    .nav-link {
+        padding: 0.4rem 0.5rem;
+        font-size: 0.75rem;
     }
 
     .hero-title {
