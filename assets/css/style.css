@@ -880,6 +880,10 @@ body {
    RESPONSIVE DESIGN
    ============================================ */
 @media (max-width: 968px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -891,6 +895,8 @@ body {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         transition: var(--transition);
         gap: 0;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
     }
 
     .nav-menu.active {
@@ -904,75 +910,27 @@ body {
 
     .nav-link {
         display: block;
-        padding: var(--spacing-sm);
+        padding: 1rem;
+        font-size: 1rem;
     }
 
     .menu-toggle {
         display: flex;
+        z-index: 1001;
     }
 
-    .hero-image {
-        width: 100%;
-        height: 100%;
-        object-position: center;
-        object-fit: cover;
-    }
-
-    .hero-content {
-        padding: var(--spacing-md);
-        max-width: 100%;
-    }
-
-    .hero-title {
-        font-size: 2.8rem;
-        line-height: 1.2;
-        margin-bottom: var(--spacing-sm);
-    }
-
-    .hero-subtitle {
-        font-size: 1.3rem;
-        line-height: 1.5;
-        margin-bottom: var(--spacing-md);
-    }
-
-    .hero-buttons {
-        gap: var(--spacing-sm);
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .crowdfunding-content {
-        grid-template-columns: 1fr;
-    }
-
-    .profitti-content {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .badge-number {
-        font-size: 4rem;
-    }
-}
-
-@media (max-width: 640px) {
-    :root {
-        --spacing-xl: 4rem;
-        --spacing-lg: 3rem;
-    }
-
-    .hero {
-        min-height: 100vh;
+    .logo img {
+        height: 45px;
     }
 
     .hero {
         min-height: 100vh;
         padding-top: 70px;
+    }
+
+    .hero .container {
+        min-height: calc(100vh - 70px);
+        padding: 1rem;
     }
 
     .hero-image {
@@ -985,48 +943,202 @@ body {
     .hero-overlay {
         background: linear-gradient(
             135deg,
-            rgba(26, 77, 140, 0.8) 0%,
-            rgba(15, 52, 96, 0.85) 50%,
-            rgba(0, 0, 0, 0.5) 100%
+            rgba(26, 77, 140, 0.85) 0%,
+            rgba(15, 52, 96, 0.9) 50%,
+            rgba(0, 0, 0, 0.6) 100%
         );
     }
 
     .hero-content {
-        padding: var(--spacing-md) var(--spacing-sm);
+        padding: 2rem 1rem;
         max-width: 100%;
     }
 
     .hero-title {
-        font-size: 2.2rem;
-        line-height: 1.2;
-        margin-bottom: var(--spacing-sm);
-        text-shadow: 0 3px 20px rgba(0, 0, 0, 0.6);
+        font-size: 2.5rem;
+        line-height: 1.15;
+        margin-bottom: 1rem;
+        text-shadow: 0 3px 25px rgba(0, 0, 0, 0.7);
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         line-height: 1.5;
-        margin-bottom: var(--spacing-md);
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 2rem;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
     }
 
     .hero-buttons {
+        gap: 1rem;
         flex-direction: column;
-        gap: var(--spacing-sm);
         width: 100%;
     }
 
     .hero-buttons .btn {
         width: 100%;
-        max-width: 300px;
+        max-width: 100%;
+        padding: 1.1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .crowdfunding-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .profitti-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .badge-number {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --spacing-xl: 3rem;
+        --spacing-lg: 2rem;
+        --spacing-md: 1.5rem;
+    }
+
+    html {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .nav-wrapper {
+        padding: 0.5rem 0;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding-top: 60px;
+    }
+
+    .hero .container {
+        min-height: calc(100vh - 60px);
+        padding: 0.5rem;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            135deg,
+            rgba(26, 77, 140, 0.88) 0%,
+            rgba(15, 52, 96, 0.92) 50%,
+            rgba(0, 0, 0, 0.65) 100%
+        );
+    }
+
+    .hero-content {
+        padding: 1.5rem 1rem;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        text-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+        letter-spacing: -0.01em;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+        padding: 0 0.5rem;
     }
 
     .hero-buttons {
         flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem 1.5rem;
+        font-size: 0.95rem;
+        border-radius: 30px;
+    }
+
+    .section {
+        padding: 2.5rem 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .content-grid,
+    .referral-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .content-card,
+    .referral-card {
+        padding: 1.5rem;
     }
 
     .btn {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
         width: 100%;
+    }
+
+    .badge-number {
+        font-size: 3rem;
+    }
+
+    .profit-percentage {
+        font-size: 2.5rem;
     }
 
     .footer-grid {
@@ -1042,23 +1154,47 @@ body {
     .footer-social {
         justify-content: center;
     }
+}
 
-    .section-title {
+/* Media query per schermi molto piccoli */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .hero-title {
         font-size: 1.75rem;
     }
 
-    .content-grid,
-    .referral-grid,
-    .gallery-grid {
-        grid-template-columns: 1fr;
+    .hero-subtitle {
+        font-size: 0.95rem;
+        padding: 0;
+    }
+
+    .hero-buttons .btn {
+        padding: 0.9rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .content-card,
+    .referral-card {
+        padding: 1.25rem;
     }
 
     .badge-number {
-        font-size: 3rem;
-    }
-
-    .profit-percentage {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 
