@@ -203,9 +203,9 @@ body {
     height: 100%;
     background: linear-gradient(
         135deg,
-        rgba(26, 77, 140, 0.75) 0%,
-        rgba(15, 52, 96, 0.85) 50%,
-        rgba(0, 0, 0, 0.4) 100%
+        rgba(26, 77, 140, 0.35) 0%,
+        rgba(15, 52, 96, 0.45) 50%,
+        rgba(0, 0, 0, 0.2) 100%
     );
     z-index: 1;
 }
@@ -971,9 +971,9 @@ body {
     .hero-overlay {
         background: linear-gradient(
             135deg,
-            rgba(26, 77, 140, 0.85) 0%,
-            rgba(15, 52, 96, 0.9) 50%,
-            rgba(0, 0, 0, 0.6) 100%
+            rgba(26, 77, 140, 0.45) 0%,
+            rgba(15, 52, 96, 0.55) 50%,
+            rgba(0, 0, 0, 0.3) 100%
         );
     }
 
@@ -1100,9 +1100,9 @@ body {
     .hero-overlay {
         background: linear-gradient(
             135deg,
-            rgba(26, 77, 140, 0.88) 0%,
-            rgba(15, 52, 96, 0.92) 50%,
-            rgba(0, 0, 0, 0.65) 100%
+            rgba(26, 77, 140, 0.5) 0%,
+            rgba(15, 52, 96, 0.6) 50%,
+            rgba(0, 0, 0, 0.35) 100%
         );
     }
 
