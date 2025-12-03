@@ -170,6 +170,7 @@ body {
     transform: translate3d(0, 0, 0);
 }
 
+.hero-video,
 .hero-image {
     position: absolute;
     top: 0;
@@ -948,6 +949,7 @@ body {
         padding: 1rem;
     }
 
+    .hero-video,
     .hero-image {
         position: absolute;
         top: 0;
@@ -1076,6 +1078,7 @@ body {
         padding: 0.5rem;
     }
 
+    .hero-video,
     .hero-image {
         position: absolute;
         top: 0;
@@ -1247,6 +1250,7 @@ body {
 
 /* Fix specifico per Safari iOS */
 @supports (-webkit-touch-callout: none) {
+    .hero-video,
     .hero-image {
         -webkit-transform: translate3d(0, 0, 0) !important;
         transform: translate3d(0, 0, 0) !important;

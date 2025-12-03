@@ -180,6 +180,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ============================================
+// HERO VIDEO AUTO-PLAY
+// ============================================
+const heroVideo = document.getElementById('heroVideo');
+if (heroVideo) {
+    // Assicura che il video sia muto e in loop
+    heroVideo.muted = true;
+    heroVideo.loop = true;
+    heroVideo.playsInline = true;
+    
+    // Prova a far partire il video
+    const playPromise = heroVideo.play();
+    
+    // Gestisci eventuali errori con autoplay
+    if (playPromise !== undefined) {
+        playPromise.catch(error => {
+            console.log('Autoplay fallito:', error);
+            // Se l'autoplay fallisce, prova a far partire il video al primo click dell'utente
+            document.addEventListener('click', () => {
+                heroVideo.play().catch(err => console.log('Errore nel play del video:', err));
+            }, { once: true });
+        });
+    }
+}
+
+// ============================================
 // PROFIT BAR ANIMATION
 // ============================================
 const profitBars = document.querySelectorAll('.bar-fill');
